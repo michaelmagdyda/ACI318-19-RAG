@@ -23,6 +23,11 @@ try:
     if not rag_utils.OPENROUTER_API_KEY:
         rag_utils.OPENROUTER_API_KEY = st.secrets.get("OPENROUTER_API_KEY", "")
     rag_utils.OPENROUTER_MODEL = st.secrets.get("OPENROUTER_MODEL", rag_utils.OPENROUTER_MODEL)
+    # The base URL is configurable so any OpenAI-compatible gateway works
+    # (OpenRouter by default, or e.g. Groq: https://api.groq.com/openai/v1).
+    rag_utils.OPENROUTER_BASE_URL = st.secrets.get(
+        "OPENROUTER_BASE_URL", rag_utils.OPENROUTER_BASE_URL
+    )
 except Exception:
     pass
 
