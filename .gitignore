@@ -1,0 +1,17 @@
+# Secrets and environment — never commit these
+.env
+.streamlit/secrets.toml
+
+# Generated vector store
+chroma_store/
+
+# Python caches
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

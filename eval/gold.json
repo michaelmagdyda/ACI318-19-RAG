@@ -1,0 +1,9 @@
+{
+  "_comment": "Ground truth for retrieval evaluation. Each question maps to the PDF page numbers (1-based) that actually contain the answer in data/ACI_318-19.pdf.pdf. Pages were verified by locating the defining code section in the PDF (e.g. concrete cover = section 20.5.1.3, columns reinforcement ratio = R10.6). Keys starting with '_' are ignored. Used by 08_evaluation.py.",
+  "What is the minimum concrete cover?": [383, 384, 385, 386, 387, 388],
+  "What is the minimum specified compressive strength of structural concrete?": [291, 357, 359],
+  "What is the minimum flexural reinforcement required for beams?": [137, 138],
+  "What is the minimum reinforcement ratio for columns?": [157, 160, 173],
+  "What are the curing requirements for concrete?": [532, 533, 534],
+  "What is the development length for deformed bars?": [473, 474, 475]
+}
