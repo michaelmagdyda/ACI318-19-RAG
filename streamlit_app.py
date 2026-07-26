@@ -36,7 +36,7 @@ chroma_stage = load_stage("05_create_chroma_store.py")
 prompting_stage = load_stage("07_prompting.py")
 evaluation_stage = load_stage("08_evaluation.py")
 
-st.set_page_config(page_title="RAG Assistant", page_icon="📚", layout="wide")
+st.set_page_config(page_title="ACI318-19-RAG Assistant", page_icon="📚", layout="wide")
 
 
 @st.cache_resource(show_spinner=False)
@@ -54,7 +54,7 @@ def ensure_store() -> int:
 
 
 # --------------------------------- Sidebar --------------------------------- #
-st.sidebar.title("📚 RAG Assistant")
+st.sidebar.title("📚 ACI318-19-RAG Assistant")
 st.sidebar.write("Ask questions and get answers grounded in your documents, with citations.")
 
 top_k = st.sidebar.slider("Number of sources (top-k)", 1, 10, rag_utils.TOP_K)
@@ -80,7 +80,7 @@ if not rag_utils.OPENROUTER_API_KEY:
     st.sidebar.warning("No OpenRouter API key found. Set it in Streamlit secrets or your .env.")
 
 # --------------------------------- Main ------------------------------------ #
-st.title("Retrieval-Augmented Generation Assistant")
+st.title("ACI318-19 American Code Assistant")
 st.caption("Answers come only from retrieved document context and cite their sources.")
 
 # Make sure a store exists before answering.
